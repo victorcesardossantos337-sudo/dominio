@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Academia Domínio | Porto dos Padres - Potência & Elegância</title>
-    <!-- Font Awesome 6 (gratuito) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts: Poppins + Playfair Display para toque charmoso -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Academia Domínio - Porto dos Padres | Potência & Elegância</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,132 +17,106 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: #fefcf5;
-            color: #1f2a3a;
+            background: #0A0F1A;
+            color: #E8EDF5;
             overflow-x: hidden;
-            scroll-behavior: smooth;
         }
 
+        /* Container padrão */
         .container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 32px;
         }
 
-        /* --- Estilo Header refinado --- */
+        /* Header */
         header {
-            background: rgba(15, 25, 45, 0.92);
-            backdrop-filter: blur(12px);
-            padding: 0.9rem 0;
+            background: rgba(10, 18, 28, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1050;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255, 215, 175, 0.2);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 180, 80, 0.2);
+            transition: all 0.3s;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .logo {
-            font-size: 1.7rem;
-            font-weight: 800;
             display: flex;
             align-items: center;
             gap: 12px;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #FFFFFF 30%, #FFB347 80%);
+            font-size: 1.6rem;
+            font-weight: 800;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: #FF8C42;
+            text-shadow: 0 0 10px rgba(255, 140, 66, 0.5);
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, #FFFFFF, #FFC085);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
 
-        .logo i {
-            font-size: 2rem;
-            background: none;
-            -webkit-background-clip: unset;
-            background-clip: unset;
-            color: #FFA559;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2.2rem;
+            gap: 2rem;
         }
 
         .nav-links a {
-            color: #f0ede8;
+            color: #E0E6F0;
             text-decoration: none;
             font-weight: 500;
-            font-size: 1rem;
-            transition: 0.25s;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -6px;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background: #FFB347;
             transition: 0.3s;
         }
 
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
-
         .nav-links a:hover {
-            color: #FFB347;
+            color: #FF8C42;
         }
 
-        /* Hero Section — sofisticado e imponente */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(107deg, #0A1828 0%, #1A2F3F 100%);
-            position: relative;
+            background: linear-gradient(135deg, #0A121F 0%, #1A2A3F 50%, #0E1A2A 100%);
             display: flex;
             align-items: center;
-            margin-top: 0;
-            isolation: isolate;
+            position: relative;
             overflow: hidden;
         }
 
         .hero::before {
-            content: "";
+            content: '';
             position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 70% 30%, rgba(255, 165, 75, 0.12), transparent 70%);
-            z-index: 1;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, rgba(255, 140, 66, 0.15), transparent 70%);
+            pointer-events: none;
         }
 
         .hero-content {
             text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            color: white;
+            position: relative;
+            z-index: 2;
         }
 
         .hero-content h1 {
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: 800;
             font-family: 'Playfair Display', serif;
-            letter-spacing: -0.5px;
-            background: linear-gradient(to right, #FFF9F0, #FFD4A4);
+            background: linear-gradient(135deg, #FFFFFF, #FFD4A0, #FF9B50);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -152,71 +126,59 @@
         .hero-content h2 {
             font-size: 1.8rem;
             font-weight: 400;
-            color: #FFD8B0;
+            color: #FFD9A5;
             margin-bottom: 1.5rem;
             letter-spacing: 1px;
         }
 
-        .rating {
-            display: flex;
+        .rating-box {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
             gap: 20px;
-            margin: 2rem 0;
-            background: rgba(255,255,240,0.08);
-            backdrop-filter: blur(4px);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
             padding: 12px 28px;
-            border-radius: 80px;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
+            border-radius: 60px;
+            margin: 1.5rem auto;
         }
 
         .stars {
-            color: #FFC107;
+            color: #FFB347;
             font-size: 1.3rem;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
         }
 
         .rating-number {
-            background: #FFA559;
+            background: #FF8C42;
+            color: #1A1A2E;
             padding: 6px 18px;
             border-radius: 40px;
             font-weight: 700;
-            font-size: 1rem;
-            color: #1F2A3A;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        .cta-button {
+        .btn-primary {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: linear-gradient(95deg, #FFA559, #FF7F3F);
-            color: #1F2A3A;
-            padding: 14px 38px;
+            background: linear-gradient(95deg, #FF8C42, #FF6B35);
+            color: #0A0F1A;
+            padding: 14px 42px;
             border-radius: 60px;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.1rem;
             margin-top: 1.8rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 12px 20px -10px rgba(255, 127, 63, 0.4);
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px -8px rgba(255, 100, 30, 0.4);
             border: none;
-            letter-spacing: 0.3px;
         }
 
-        .cta-button i {
-            font-size: 1.2rem;
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 30px -10px rgba(255, 100, 30, 0.6);
         }
 
-        .cta-button:hover {
-            transform: translateY(-5px);
-            background: linear-gradient(95deg, #FFB26B, #FF964F);
-            box-shadow: 0 20px 28px -12px rgba(255, 100, 30, 0.5);
-        }
-
-        /* Sections refinadas */
+        /* Seções */
         section {
             padding: 90px 0;
         }
@@ -226,11 +188,8 @@
             font-size: 2.6rem;
             font-weight: 700;
             font-family: 'Playfair Display', serif;
-            color: #1C2E42;
+            color: #FFE4C0;
             margin-bottom: 3rem;
-            position: relative;
-            display: inline-block;
-            width: 100%;
         }
 
         .section-title:after {
@@ -238,179 +197,179 @@
             display: block;
             width: 70px;
             height: 4px;
-            background: #FFA559;
+            background: #FF8C42;
             margin: 16px auto 0;
             border-radius: 4px;
         }
 
-        /* Info Cards - elegantes */
-        .info-grid {
+        /* Cards */
+        .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-top: 1rem;
         }
 
-        .info-card {
-            background: #FFFFFF;
-            padding: 2rem 1.5rem;
-            border-radius: 32px;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+        .card {
+            background: rgba(30, 40, 55, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 28px;
+            padding: 2rem;
             text-align: center;
-            transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            border: 1px solid rgba(255, 165, 75, 0.2);
-            backdrop-filter: blur(2px);
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 140, 66, 0.2);
         }
 
-        .info-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 28px 40px -16px rgba(255, 100, 30, 0.25);
-            border-color: rgba(255, 165, 75, 0.5);
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 140, 66, 0.6);
+            background: rgba(40, 52, 70, 0.8);
         }
 
-        .info-card i {
+        .card i {
             font-size: 3rem;
-            background: linear-gradient(135deg, #FF8C42, #E8622E);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: #FF8C42;
             margin-bottom: 1rem;
         }
 
-        .info-card h3 {
-            font-size: 1.6rem;
-            margin: 1rem 0 0.8rem;
-            font-weight: 700;
-            color: #1E2F41;
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #FFE0B5;
         }
 
-        .info-card p {
-            color: #4a5b6e;
-            font-weight: 400;
+        .card p {
+            color: #B0C4DE;
             line-height: 1.5;
         }
 
-        /* Avaliações - estilo depoimentos premium */
-        .reviews-section {
-            background: linear-gradient(115deg, #FEF9F0 0%, #FFF5E6 100%);
-            border-radius: 80px 0 80px 0;
-            margin: 20px 0;
-            box-shadow: inset 0 0 0 1px rgba(255,255,240,0.8);
+        /* Depoimentos */
+        .testimonials-section {
+            background: linear-gradient(135deg, #0E1622, #0A101C);
         }
 
-        .review-card {
-            background: rgba(255, 255, 255, 0.85);
+        .testimonial-card {
+            background: rgba(25, 35, 50, 0.8);
             backdrop-filter: blur(8px);
-            border-radius: 2rem;
-            padding: 2rem;
-            transition: 0.2s;
-            border: 1px solid rgba(255, 165, 75, 0.3);
-            box-shadow: 0 12px 25px -10px rgba(0,0,0,0.05);
+            border-radius: 24px;
+            padding: 1.8rem;
+            border-left: 4px solid #FF8C42;
         }
 
-        .review-card:hover {
-            background: white;
-            border-color: #FFA559;
-        }
-
-        .review-author {
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #1F2E3F;
+        .testimonial-author {
             display: flex;
             align-items: center;
             gap: 8px;
+            font-weight: 700;
+            color: #FFC894;
+            margin-bottom: 0.8rem;
         }
 
-        .review-author i {
-            color: #FFA559;
-            font-size: 1.2rem;
-        }
-
-        .review-text {
-            font-style: normal;
-            color: #2c3e4e;
-            margin-top: 12px;
-            font-weight: 400;
+        .testimonial-text {
+            font-style: italic;
+            color: #CCDDE8;
             line-height: 1.5;
-            border-left: 3px solid #FFA559;
-            padding-left: 18px;
         }
 
-        /* Contact elegante */
+        /* Contato */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
+            gap: 2.5rem;
         }
 
-        .glass-contact {
-            background: #FFFFFF;
-            border-radius: 40px;
+        .contact-card {
+            background: rgba(30, 40, 55, 0.6);
+            border-radius: 32px;
             padding: 2rem;
-            box-shadow: 0 25px 40px -18px rgba(0,0,0,0.15);
-            border: 1px solid rgba(255,165,75,0.3);
+            border: 1px solid rgba(255, 140, 66, 0.2);
         }
 
         .contact-item {
             display: flex;
             align-items: center;
             gap: 1rem;
-            margin-bottom: 1.8rem;
             padding: 1rem;
-            background: #FEF7EF;
-            border-radius: 28px;
-            transition: 0.2s;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            margin-bottom: 1rem;
         }
 
         .contact-item i {
             font-size: 1.8rem;
-            color: #FF7F3F;
-            width: 48px;
-        }
-
-        .contact-item strong {
-            color: #1F2E3F;
+            color: #FF8C42;
+            width: 50px;
         }
 
         .btn-whatsapp {
-            background: #25D366;
-            background: linear-gradient(105deg, #25D366, #128C7E);
-            color: white !important;
-            box-shadow: 0 5px 12px rgba(37, 211, 102, 0.3);
+            background: linear-gradient(95deg, #25D366, #128C7E);
+            color: white;
         }
 
+        .btn-whatsapp:hover {
+            background: linear-gradient(95deg, #34CE7C, #1BA392);
+        }
+
+        /* Footer */
         footer {
-            background: #0F1A24;
-            color: #E9E2D4;
-            border-top: 1px solid #FFB87C30;
+            background: #050A12;
+            padding: 3rem 0 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 140, 66, 0.2);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
         }
 
         .social-links a {
-            background: rgba(255, 165, 75, 0.15);
-            width: 44px;
-            height: 44px;
-            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 140, 66, 0.15);
+            border-radius: 50%;
+            display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            transition: 0.2s;
-            color: #FFCF9A;
-            font-size: 1.4rem;
+            color: #FFC084;
+            font-size: 1.3rem;
+            transition: 0.3s;
         }
 
         .social-links a:hover {
-            background: #FFA559;
-            color: #1F2A3A;
-            transform: scale(1.05);
+            background: #FF8C42;
+            color: #0A0F1A;
+            transform: scale(1.1);
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content h2 {
+                font-size: 1.2rem;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 0 20px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
         }
 
         /* Animações */
         @keyframes fadeUp {
             from {
                 opacity: 0;
-                transform: translateY(35px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -418,63 +377,57 @@
             }
         }
 
-        .fade-up {
-            opacity: 0;
-            animation: fadeUp 0.8s cubic-bezier(0.2, 0.9, 0.4, 1) forwards;
+        .animate {
+            animation: fadeUp 0.8s ease forwards;
         }
 
-        /* responsivo */
-        @media (max-width: 880px) {
-            .nav-links {
-                display: none;
-            }
-            .hero-content h1 {
-                font-size: 2.8rem;
-            }
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
-            .container {
-                padding: 0 24px;
-            }
-            .rating {
-                flex-direction: column;
-                gap: 12px;
-                padding: 14px 24px;
-            }
-        }
-
-        @media (max-width: 550px) {
-            .hero-content h1 {
-                font-size: 2.3rem;
-            }
-            .cta-button {
-                padding: 12px 28px;
-            }
-        }
-
-        /* detalhe extra: botão flutuante mental? não, mas um toque refinado nos cards */
-        .info-card .small-text {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #FF7F3F;
-            margin-top: 10px;
-        }
-        .highlight {
-            font-weight: 700;
-            color: #E65C1E;
+        /* loading inicial */
+        .hide-on-auth {
+            display: none;
         }
     </style>
 </head>
 <body>
 
-<header id="header">
+<!-- ===== PROTEÇÃO POR SENHA ===== -->
+<script>
+    const SENHA_CORRETA = "academia2025";
+    
+    if (!sessionStorage.getItem('auth_dominio')) {
+        let tentativa = prompt("🔒 ACESSO RESTRITO - Academia Domínio\n\nDigite a senha para visualizar o site:");
+        
+        if (tentativa !== SENHA_CORRETA) {
+            document.body.innerHTML = `
+                <div style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    font-family: 'Poppins', sans-serif;
+                    background: linear-gradient(135deg, #0A0F1A 0%, #1A1A2E 100%);
+                    color: white;
+                    text-align: center;
+                    padding: 20px;
+                ">
+                    <i class="fas fa-lock" style="font-size: 70px; margin-bottom: 25px; color: #FF6B35;"></i>
+                    <h1 style="font-size: 2rem;">Acesso Negado</h1>
+                    <p style="margin-top: 15px; opacity: 0.8;">Este site é privado.</p>
+                    <p style="font-size: 14px; margin-top: 20px;">Contate o administrador para obter acesso.</p>
+                </div>
+            `;
+            throw new Error("Acesso negado");
+        }
+        
+        sessionStorage.setItem('auth_dominio', 'true');
+    }
+</script>
+
+<!-- Header -->
+<header>
     <nav class="container">
         <div class="logo">
-            <i class="fas fa-dumbbell"></i> 
+            <i class="fas fa-dumbbell"></i>
             <span>DOMÍNIO</span>
         </div>
         <ul class="nav-links">
@@ -489,190 +442,156 @@
 <!-- Hero Section -->
 <section id="inicio" class="hero">
     <div class="container">
-        <div class="hero-content fade-up" style="animation-delay: 0.1s;">
+        <div class="hero-content animate">
             <h1>Academia Domínio</h1>
             <h2>Porto dos Padres • Onde força encontra elegância</h2>
-            <div class="rating">
+            <div class="rating-box">
                 <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
                 <span class="rating-number">5.0 ★ (124 avaliações)</span>
             </div>
-            <a href="#contato" class="cta-button"><i class="fas fa-calendar-check"></i> Agende sua visita gratuita</a>
+            <a href="#contato" class="btn-primary"><i class="fas fa-calendar-check"></i> Agende sua visita gratuita</a>
         </div>
     </div>
 </section>
 
-<!-- Sobre / Informações principais -->
+<!-- Sobre -->
 <section id="sobre">
     <div class="container">
         <h2 class="section-title">Experiência que transforma</h2>
-        <div class="info-grid">
-            <div class="info-card fade-up">
+        <div class="cards-grid">
+            <div class="card animate">
                 <i class="fas fa-map-marker-alt"></i>
-                <h3>Localização premium</h3>
+                <h3>Localização</h3>
                 <p>Av. Pref. Dr. Roque Vernalha, 2002<br>Vila Itiberê, Paranaguá - PR<br>83221-000</p>
-                <div class="small-text"><i class="fas fa-parking"></i> Estacionamento próprio</div>
             </div>
-            <div class="info-card fade-up">
+            <div class="card animate">
                 <i class="fas fa-clock"></i>
-                <h3>Horário estendido</h3>
-                <p><strong class="highlight">Aberto agora</strong> • Segunda a sábado<br>Até <strong>23:00</strong> para você treinar no seu ritmo</p>
-                <div class="small-text">Horário de pico: 20h | média 45min-1h30</div>
+                <h3>Horário</h3>
+                <p><strong style="color:#FF8C42;">Aberto agora</strong><br>Segunda a Sábado<br>Até <strong>23:00</strong></p>
             </div>
-            <div class="info-card fade-up">
+            <div class="card animate">
                 <i class="fas fa-dumbbell"></i>
-                <h3>Estrutura de elite</h3>
-                <p>Equipamentos modernos, ar condicionado, música envolvente e área funcional completa.</p>
-                <div class="small-text"> + de 1500m² de potência</div>
+                <h3>Estrutura</h3>
+                <p>Equipamentos modernos<br>Ar condicionado<br>Professores qualificados</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Depoimentos - charmoso e autêntico -->
-<section id="avaliacoes" class="reviews-section">
-    <div class="container" style="padding: 20px 0;">
-        <h2 class="section-title">Vozes da nossa tribo</h2>
-        <div class="info-grid">
-            <div class="review-card fade-up">
-                <div class="review-author"><i class="fas fa-user-astronaut"></i> Heaven</div>
-                <div class="review-text">“Muito boa academia, profissional, ótimos equipamentos e estrutura impecável. Ambiente que motiva!”</div>
-                <div class="small-text" style="margin-top: 12px;"><i class="fas fa-star" style="color:#FFA559;"></i> 5 estrelas</div>
+<!-- Depoimentos -->
+<section id="avaliacoes" class="testimonials-section">
+    <div class="container">
+        <h2 class="section-title">O que nossos alunos dizem</h2>
+        <div class="cards-grid">
+            <div class="testimonial-card animate">
+                <div class="testimonial-author">
+                    <i class="fas fa-user-circle"></i> Heaven
+                </div>
+                <div class="testimonial-text">
+                    "Muito boa academia, profissional, ótimos equipamentos e boa estrutura!"
+                </div>
             </div>
-            <div class="review-card fade-up">
-                <div class="review-author"><i class="fas fa-user-check"></i> Alexander Gomes</div>
-                <div class="review-text">“Ótimo lugar, com equipamentos novos e de qualidade, atendimento excelente. A academia mais completa da região.”</div>
-                <div class="small-text" style="margin-top: 12px;"><i class="fas fa-star" style="color:#FFA559;"></i> 5 estrelas</div>
+            <div class="testimonial-card animate">
+                <div class="testimonial-author">
+                    <i class="fas fa-user-circle"></i> Alexander Gomes
+                </div>
+                <div class="testimonial-text">
+                    "Ótimo lugar, com equipamentos novos e de qualidade, atendimento excelente."
+                </div>
             </div>
-            <div class="review-card fade-up">
-                <div class="review-author"><i class="fas fa-fitness"></i> Andrezza Cavalcante</div>
-                <div class="review-text">“Ambiente maravilhoso para treinar, bastante equipamentos show e professores super atenciosos. Me ssegunda casa.”</div>
-                <div class="small-text" style="margin-top: 12px;"><i class="fas fa-star" style="color:#FFA559;"></i> 5 estrelas</div>
+            <div class="testimonial-card animate">
+                <div class="testimonial-author">
+                    <i class="fas fa-user-circle"></i> Andrezza Cavalcante
+                </div>
+                <div class="testimonial-text">
+                    "Ambiente maravilhoso para treinar, bastante equipamentos show"
+                </div>
             </div>
-        </div>
-        <!-- + depoimento extra (charme) -->
-        <div style="text-align: center; margin-top: 2rem;">
-            <p style="font-style: italic; color:#6A4E2E;">⭐ mais de 120 clientes satisfeitos só no Google Maps ⭐</p>
         </div>
     </div>
 </section>
 
-<!-- Contato elegante com CTA direto -->
+<!-- Contato -->
 <section id="contato">
     <div class="container">
-        <h2 class="section-title">Sua jornada começa aqui</h2>
+        <h2 class="section-title">Entre em Contato</h2>
         <div class="contact-grid">
-            <div class="glass-contact fade-up">
-                <h3 style="color:#1C2E42; margin-bottom: 1rem;"><i class="fas fa-heart" style="color:#FF7F3F;"></i> Vamos conversar?</h3>
-                <p style="margin-bottom: 1.8rem;">Treine no ambiente mais acolhedor e sofisticado de Porto dos Padres. Atendimento personalizado, planos flexíveis e primeiro treino experimental gratuito.</p>
-                <a href="tel:+5541984995739" class="cta-button" style="background:#1F2E3F; color:white; box-shadow: none;"><i class="fas fa-phone-alt"></i> Ligar agora</a>
-                <a href="https://wa.me/5541984995739" target="_blank" class="cta-button btn-whatsapp" style="margin-left: 12px; background: #25D366; color: #1F2A3A;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <div class="contact-card animate">
+                <h3 style="color:#FFC894; margin-bottom: 1rem;">✨ Venha treinar conosco!</h3>
+                <p>Horário de pico: <strong>20:00</strong><br>Tempo médio de permanência: 45min a 1h30</p>
+                <a href="tel:+5541984995739" class="btn-primary" style="margin-top: 1.5rem; display: inline-block;">
+                    <i class="fas fa-phone"></i> Ligar Agora
+                </a>
             </div>
-            <div class="glass-contact fade-up">
+            <div class="contact-card animate">
                 <div class="contact-item">
-                    <i class="fas fa-map-pin"></i>
-                    <div><strong>Endereço completo</strong><br>Av. Pref. Dr. Roque Vernalha, 2002<br>Vila Itiberê, Paranaguá - PR, 83221-000</div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div><strong>Endereço:</strong><br>Av. Pref. Dr. Roque Vernalha, 2002</div>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <div><strong>Contato direto</strong><br>(41) 98499-5739<br><span style="font-size:0.85rem;">Atendimento via ligação e WhatsApp</span></div>
+                    <i class="fab fa-whatsapp"></i>
+                    <div><strong>WhatsApp:</strong><br>(41) 98499-5739</div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-clock"></i>
-                    <div><strong>Funcionamento</strong><br>Segunda a Sexta: 06h - 23h<br>Sábado: 08h - 18h | Domingo: 09h - 13h</div>
+                    <div><strong>Horário:</strong><br>Aberto até 23:00</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Footer refinado -->
+<!-- Footer -->
 <footer>
     <div class="container">
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-            <div class="logo" style="background: none; color:#FFCF9A; font-size: 1.5rem;">
-                <i class="fas fa-dumbbell"></i> Academia Domínio
-            </div>
-            <p style="max-width: 500px; opacity: 0.85;">Transformando vidas através do esporte e bem-estar desde 2019. Orgulho em Porto dos Padres.</p>
-            <div class="social-links">
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/5541984995739" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            </div>
-            <p style="font-size: 0.85rem; margin-top: 1rem;">© 2025 Academia Domínio - Porto dos Padres. Todos os direitos reservados.</p>
+        <div class="logo" style="justify-content: center; margin-bottom: 1rem;">
+            <i class="fas fa-dumbbell"></i>
+            <span>DOMÍNIO</span>
         </div>
+        <p>Academia Domínio - Porto dos Padres</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5541984995739" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <p style="font-size: 0.8rem; opacity: 0.7;">© 2025 Academia Domínio - Todos os direitos reservados</p>
     </div>
 </footer>
 
 <script>
-    // Smooth scroll para links internos + ativar classe ativa no menu
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            if (targetId === "#" || targetId === "") return;
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
                 e.preventDefault();
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                // atualiza URL sem hash jump brusco (opcional)
-                history.pushState(null, null, targetId);
+                target.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
 
-    // Observer para animação fade-up quando entrar na viewport
-    const fadeElements = document.querySelectorAll('.fade-up');
+    // Animação ao scroll
+    const animatedElements = document.querySelectorAll('.animate');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
-                entry.target.style.animationPlayState = 'running';
+                entry.target.style.animation = 'fadeUp 0.8s ease forwards';
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.1 });
 
-    fadeElements.forEach(el => {
+    animatedElements.forEach(el => {
         el.style.opacity = '0';
-        el.style.animationPlayState = 'paused';
         observer.observe(el);
     });
-
-    // header efeito de sombra ao rolar
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            header.style.background = 'rgba(10, 22, 38, 0.96)';
-            header.style.backdropFilter = 'blur(14px)';
-            header.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
-        } else {
-            header.style.background = 'rgba(15, 25, 45, 0.92)';
-            header.style.backdropFilter = 'blur(12px)';
-            header.style.boxShadow = 'none';
-        }
-    });
-
-    // pequeno detalhe: garantir que qualquer clique no botão WhatsApp funcione
-    const whatsBtn = document.querySelector('.btn-whatsapp');
-    if(whatsBtn) {
-        whatsBtn.addEventListener('click', (e) => {
-            // já tem href, apenas prevenir propagação se necessário
-        });
-    }
-
-    // corrigir links sociais para abrir nova aba (placeholder, mas com estilo)
-    const socialIcons = document.querySelectorAll('.social-links a');
-    socialIcons.forEach(icon => {
-        icon.setAttribute('target', '_blank');
-        icon.setAttribute('rel', 'noopener noreferrer');
-    });
-    // melhorar link do whats do footer
-    const footerWhats = document.querySelector('.social-links a[href*="whatsapp"]');
-    if(footerWhats && footerWhats.getAttribute('href') === '#') {
-        footerWhats.setAttribute('href', 'https://wa.me/5541984995739');
-    }
 </script>
 </body>
 </html>
