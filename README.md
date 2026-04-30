@@ -178,6 +178,24 @@
             box-shadow: 0 18px 30px -10px rgba(255, 100, 30, 0.6);
         }
 
+        .btn-whatsapp {
+            background: linear-gradient(95deg, #25D366, #128C7E);
+            color: white;
+            box-shadow: 0 10px 25px -8px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            background: linear-gradient(95deg, #34CE7C, #1BA392);
+            box-shadow: 0 18px 30px -10px rgba(37, 211, 102, 0.6);
+        }
+
+        .buttons-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         section {
             padding: 90px 0;
         }
@@ -296,15 +314,6 @@
             width: 50px;
         }
 
-        .btn-whatsapp {
-            background: linear-gradient(95deg, #25D366, #128C7E);
-            color: white;
-        }
-
-        .btn-whatsapp:hover {
-            background: linear-gradient(95deg, #34CE7C, #1BA392);
-        }
-
         footer {
             background: #050A12;
             padding: 3rem 0 2rem;
@@ -358,6 +367,13 @@
             .section-title {
                 font-size: 2rem;
             }
+            .buttons-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn-primary, .btn-whatsapp {
+                width: fit-content;
+            }
         }
 
         @keyframes fadeUp {
@@ -410,7 +426,10 @@
                 </div>
                 <span class="rating-number">5.0 ★ (124 avaliações)</span>
             </div>
-            <a href="#contato" class="btn-primary"><i class="fas fa-calendar-check"></i> Agende sua visita gratuita</a>
+            <div class="buttons-group">
+                <a href="#contato" class="btn-primary"><i class="fas fa-calendar-check"></i> Agende sua visita</a>
+                <a href="https://wa.me/5541984995739" target="_blank" class="btn-primary btn-whatsapp"><i class="fab fa-whatsapp"></i> Fale no WhatsApp</a>
+            </div>
         </div>
     </div>
 </section>
@@ -480,9 +499,14 @@
             <div class="contact-card animate">
                 <h3 style="color:#FFC894; margin-bottom: 1rem;">✨ Venha treinar conosco!</h3>
                 <p>Horário de pico: <strong>20:00</strong><br>Tempo médio de permanência: 45min a 1h30</p>
-                <a href="tel:+5541984995739" class="btn-primary" style="margin-top: 1.5rem; display: inline-block;">
-                    <i class="fas fa-phone"></i> Ligar Agora
-                </a>
+                <div class="buttons-group" style="margin-top: 1.5rem; justify-content: flex-start;">
+                    <a href="tel:+5541984995739" class="btn-primary" style="margin-top: 0;">
+                        <i class="fas fa-phone"></i> Ligar
+                    </a>
+                    <a href="https://wa.me/5541984995739" target="_blank" class="btn-primary btn-whatsapp" style="margin-top: 0;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
             </div>
             <div class="contact-card animate">
                 <div class="contact-item">
