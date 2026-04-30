@@ -22,7 +22,6 @@
             overflow-x: hidden;
         }
 
-        /* Container padrão */
         .container {
             max-width: 1280px;
             margin: 0 auto;
@@ -171,6 +170,7 @@
             transition: all 0.3s;
             box-shadow: 0 10px 25px -8px rgba(255, 100, 30, 0.4);
             border: none;
+            cursor: pointer;
         }
 
         .btn-primary:hover {
@@ -178,7 +178,6 @@
             box-shadow: 0 18px 30px -10px rgba(255, 100, 30, 0.6);
         }
 
-        /* Seções */
         section {
             padding: 90px 0;
         }
@@ -202,7 +201,6 @@
             border-radius: 4px;
         }
 
-        /* Cards */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -242,7 +240,6 @@
             line-height: 1.5;
         }
 
-        /* Depoimentos */
         .testimonials-section {
             background: linear-gradient(135deg, #0E1622, #0A101C);
         }
@@ -270,7 +267,6 @@
             line-height: 1.5;
         }
 
-        /* Contato */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -309,7 +305,6 @@
             background: linear-gradient(95deg, #34CE7C, #1BA392);
         }
 
-        /* Footer */
         footer {
             background: #050A12;
             padding: 3rem 0 2rem;
@@ -335,6 +330,7 @@
             color: #FFC084;
             font-size: 1.3rem;
             transition: 0.3s;
+            text-decoration: none;
         }
 
         .social-links a:hover {
@@ -343,7 +339,6 @@
             transform: scale(1.1);
         }
 
-        /* Responsivo */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -365,7 +360,6 @@
             }
         }
 
-        /* Animações */
         @keyframes fadeUp {
             from {
                 opacity: 0;
@@ -380,48 +374,9 @@
         .animate {
             animation: fadeUp 0.8s ease forwards;
         }
-
-        /* loading inicial */
-        .hide-on-auth {
-            display: none;
-        }
     </style>
 </head>
 <body>
-
-<!-- ===== PROTEÇÃO POR SENHA ===== -->
-<script>
-    const SENHA_CORRETA = "academia2025";
-    
-    if (!sessionStorage.getItem('auth_dominio')) {
-        let tentativa = prompt("🔒 ACESSO RESTRITO - Academia Domínio\n\nDigite a senha para visualizar o site:");
-        
-        if (tentativa !== SENHA_CORRETA) {
-            document.body.innerHTML = `
-                <div style="
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100vh;
-                    font-family: 'Poppins', sans-serif;
-                    background: linear-gradient(135deg, #0A0F1A 0%, #1A1A2E 100%);
-                    color: white;
-                    text-align: center;
-                    padding: 20px;
-                ">
-                    <i class="fas fa-lock" style="font-size: 70px; margin-bottom: 25px; color: #FF6B35;"></i>
-                    <h1 style="font-size: 2rem;">Acesso Negado</h1>
-                    <p style="margin-top: 15px; opacity: 0.8;">Este site é privado.</p>
-                    <p style="font-size: 14px; margin-top: 20px;">Contate o administrador para obter acesso.</p>
-                </div>
-            `;
-            throw new Error("Acesso negado");
-        }
-        
-        sessionStorage.setItem('auth_dominio', 'true');
-    }
-</script>
 
 <!-- Header -->
 <header>
@@ -476,9 +431,9 @@
                 <p><strong style="color:#FF8C42;">Aberto agora</strong><br>Segunda a Sábado<br>Até <strong>23:00</strong></p>
             </div>
             <div class="card animate">
-                <i class="fas fa-dumbbell"></i>
-                <h3>Estrutura</h3>
-                <p>Equipamentos modernos<br>Ar condicionado<br>Professores qualificados</p>
+                <i class="fas fa-phone"></i>
+                <h3>Contato</h3>
+                <p>(41) 98499-5739</p>
             </div>
         </div>
     </div>
@@ -565,7 +520,7 @@
 </footer>
 
 <script>
-    // Smooth scroll
+    // Smooth scroll para links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const target = document.querySelector(this.getAttribute('href'));
